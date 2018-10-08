@@ -1,9 +1,21 @@
 // DO WHATEVER YOU WANT HERE
-
-const createEnumerableProperty = () => {};
-const createNotEnumerableProperty = () => {};
-const createProtoMagicObject = () => {};
-const incrementor = () => {};
+const createEnumerableProperty = (propertyName) => {propertyName};
+const createNotEnumerableProperty = (propertyName) => {Object.defineProperty(object, propertyName, {value:null,enumerable:false});};
+const createProtoMagicObject = () => {
+  var magicObject = {}, magicObj=new magicObj();
+  magicObject.__proto__=magicObj;
+  return magicObject;
+};
+var suncSum=0;
+const incrementor = () => {
+  suncSum++;
+  function total() {
+    suncSum++;
+    return total;
+  }
+  total.toString=function () {return suncSum};
+  return total;
+};
 const asyncIncrementor = () => {};
 const createIncrementer = () => {};
 
